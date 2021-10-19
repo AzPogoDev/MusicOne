@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$dark : #E3E3E3;
+body {
+  min-height: 100vh;
+  background: $dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica;
+}
