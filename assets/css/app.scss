@@ -1,14 +1,35 @@
+@import "base/theme";
+
+@import 'src/layout/footer';
+@import 'src/layout/header';
+
+@import "src/main/index";
+
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: theme-font('title')
 }
-$dark : #E3E3E3;
+
 body {
-  min-height: 100vh;
-  background: $dark;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Helvetica;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  transform: scale(1.1);
 }
