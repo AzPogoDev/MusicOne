@@ -1,0 +1,19 @@
+$colors: (
+        primary:#273c75,
+        secondary:#353b48,
+        danger:#c23616,
+        light:#f5f6fa
+);
+
+$fonts: (
+        title: 'Work Sans',
+        content :'Montserrat'
+);
+
+@function theme-color($key) {
+  @return map-get($colors, $key)
+}
+
+@function theme-font($key) {
+  @return map-get($fonts, $key)
+}
