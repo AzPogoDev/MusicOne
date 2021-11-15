@@ -1,0 +1,14 @@
+data:
+  - label: Chez moi
+    address:
+      street: 63 boulevard vauban
+      zipcode: 59000
+      city: Lille
+      country: FR
+
+  - label: Zenith
+    address:
+      street: 20 rue du port
+      zipcode: 59000
+      city: Paris
+      country: FR

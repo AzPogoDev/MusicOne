@@ -1,0 +1,4 @@
+data:
+  - { name: 'Concert', icon: 'fa-guitar' }
+  - { name: 'Festival', icon: 'fa-users' }
+  - { name: 'Karaoke', icon: 'fa-microphone-alt' }

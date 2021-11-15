@@ -1,0 +1,7 @@
+data:
+  - firstname: Henri
+    email: henricousin07@gmail.com
+    password: motdepasse1+A
+    displayName: PogoDev
+    lastname: Cousin
+    status: STATUS_ACTIVE
