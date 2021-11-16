@@ -11,6 +11,7 @@ Encore
     .setPublicPath('/build')
 
     .addEntry('app', './assets/js/app.js')
+    .addEntry('event', './assets/js/src/event/index.js')
 
     .splitEntryChunks()
 

@@ -7,7 +7,7 @@
 
 
             <li class="header__list">
-                <a class="header__link" href="#">Events</a>
+                <a class="header__link" href="{{ path('event_main') }}">Events</a>
             </li>
 
             <li class="header__list">
@@ -17,13 +17,20 @@
         <ul class="header__menu__nav">
 
 
-            <li class="header__list">
-                <a class="header__link" href="#">S'inscrire</a>
-            </li>
+            {% if( app.user) %}
+                <li class="header__list">
+                    <a class="header__link connect" href="{{ path('app_logout') }}">Se déconnecter</a>
+                </li>
+            {% else %}
+                <li class="header__list">
+                    <a class="header__link" href="#">S'inscrire</a>
+                </li>
+                <li class="header__list">
+                    <a class="header__link connect" href="{{ path('app_login') }}">Se connecter</a>
+                </li>
+            {% endif %}
 
-            <li class="header__list">
-                <a class="header__link connect" href="#">Se connecter</a>
-            </li>
+
         </ul>
     </div>
 

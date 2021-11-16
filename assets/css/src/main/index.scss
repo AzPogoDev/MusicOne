@@ -1,11 +1,10 @@
 .homePage {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
   h1 {
-    color: theme-color('light');
-    font-family: theme-font('content');
+    color: theme-color(primary);
+    font-family: theme-font('content'), serif;
   }
 }

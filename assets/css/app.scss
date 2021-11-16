@@ -10,7 +10,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: theme-font('title')
+  font-family: theme-font('title');
 }
 
 body {
@@ -20,10 +20,41 @@ body {
 }
 
 main {
-  background: #0f0c29; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   flex: 1;
+
+
+  h1 {
+    color: theme-color(white);
+  }
+}
+
+.networkBox {
+  i {
+    color: theme-color(white);
+    margin-right: 1rem;
+    font-size: 22Px;
+  }
+}
+
+.iconeBox {
+  display: flex;
+  align-items: center;
+
+  i {
+    margin-right: 1rem;
+    color: theme-color('primary');
+  }
+}
+
+.container {
+  max-width: 90%;
+  padding-top: 90px;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
 }
 
 a {
@@ -32,4 +63,30 @@ a {
 
 a:hover {
   transform: scale(1.1);
+}
+
+
+//OO css
+
+.w-50 {
+  width: 48% !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  padding: 12px 32px;
+  text-decoration: none;
+
+  &-primary {
+
+    border: 1Px solid theme-color('primary');
+    border-radius: 12px;
+
+    a {
+      color: theme-color('primary');
+    }
+  }
 }

@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EventController!{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('event') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('event') }}
+{% endblock %}
+
+{% block body %}
+    <div class="event">
+        <div class="container">
+            <div class="event__content">
+                <div class="event__createSideBar">
+                    <div class="event__createSideBar__top">
+                        <h2>Créer un nouvel event</h2>
+                        <p>Vous pouvez maintenant créer un nouvel evenemeent</p>
+                    </div>
+
+                    <div class="iconeBox">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>user phone</h3>
+                    </div>
+                    <div class="iconeBox">
+                        <i class="far fa-envelope"></i>
+                        <h3>user email</h3>
+                    </div>
+                    <div class="networkBox">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="event__createMain">
+
+                    <form class="event__createMain__forms">
+                        <div class="event__createMain__form w-50">
+                            <label for="name">Nom</label>
+                            <input name="name" class="event__createMain__form__input">
+                        </div>
+                        <div class="event__createMain__form w-50">
+                            <label for="place">Lieux</label>
+                            <input name="place" class="event__createMain__form__input">
+
+
+                        </div>
+                        <div class="event__createMain__form w-50">
+                            <label for="capacity">Capacity</label>
+                            <input name="capacity" class="event__createMain__form__input">
+
+                        </div>
+
+                        <div class="event__createMain__form w-50">
+                            <label for="date">Date</label>
+                            <input name="date" class="event__createMain__form__input">
+                        </div>
+                        <div class="event__createMain__form__button btn btn-primary">
+                            <a href="#" type="submit">Créer un évent</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
