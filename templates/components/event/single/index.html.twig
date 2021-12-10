@@ -13,20 +13,70 @@
 {% endblock %}
 
 {% block body %}
-    <div class="event">
+    <div class="event-single">
         <div class="container">
-            <div class="event__heroHeader" style="background: url('{{ event.picture }}')">
-                <h1>
+            <div class="event-single__heroHeader" style="background: url('{{ event.picture }}')">
+                <h1 class="title">
                     {{ event.name }}
                 </h1>
             </div>
+            <div class="event-single__content">
+                <div class="container-meta">
+                    <div class="meta block">
+                        <h4 class="sub-title">Début :</h4>
+                        <p>
+                            {{ event.startAt | date('h:m:y') }}
+                        </p>
 
-            <ul>
-                <li>{{ event.place.label }}</li>
-                <li>{{ event.capacity }}</li>
-                <li>{{ event.category.name }}</li>
-                <li>{{ event.startAt | date('h:m:i') }}</li>
-            </ul>
+                        <h4 class="sub-title">Fin :</h4>
+                        <p>
+                            {{ event.endAt | date('h:m:y') }}
+                        </p>
+                    </div>
+                    <div class="desc block">
+                        <h4 class="sub-title">Capactité :</h4>
+                        <p>
+                            {{ event.capacity }}
+                        </p>
+                        <h4 class="sub-title">Catégorie :</h4>
+                        <p>
+                            {{ event.category.name }}
+                        </p>
+                        <h4 class="sub-title">Informations de réservation :</h4>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sagittis odio. Aliquam sed
+                            mi sit amet diam consequat posuere. Morbi leo augue, elementum fermentum aliquet et, commodo
+                            id lorem. Suspendisse blandit lacus eu tellus rutrum, eu mattis mi ornare. Pellentesque
+                            rhoncus lacus urna, ut laoreet neque aliquam ac. Ut sagittis augue tellus, a vestibulum diam
+                            mattis eu. Vivamus mollis velit mauris, et rhoncus tellus facilisis quis. Fusce et cursus
+                            sapien. Donec eget viverra odio.
+                        </p>
+                        <div class="btn-box">
+                            <a href="/" class="btn btn-outline-secondary">Réserver</a>
+                        </div>
+                    </div>
+                    <div class="meta-2 block">
+                        <h4 class="sub-title">Prix :</h4>
+                        <p>
+                            {{ event.price }} $
+                        </p>
+                    </div>
+                    <div class="meta-bottom block">
+                        <h4 class="sub-title">Description</h4>
+                        <p>
+                            {{ event.description }}
+                        </p>
+                    </div>
+                </div>
+                <ul>
+                    <li>{{ event.place.label }}</li>
+                    <li>{{ event.capacity }}</li>
+                    <li>{{ event.category.name }}</li>
+                    <li>{{ event.startAt | date('h:m:i') }}</li>
+                </ul>
+            </div>
+
+
         </div>
     </div>
 

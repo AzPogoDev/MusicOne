@@ -25,7 +25,7 @@ main {
 
 
   h1 {
-    color: theme-color(white);
+    color: theme-color('primary');
   }
 }
 
@@ -45,12 +45,6 @@ main {
     margin-right: 1rem;
     color: theme-color('primary');
   }
-}
-
-.container {
-  max-width: 90%;
-  padding-top: 90px;
-  margin: auto;
 }
 
 ul {
@@ -79,6 +73,9 @@ a {
 .btn {
   padding: 12px 32px;
   text-decoration: none;
+  background: inherit;
+  border: 1px solid theme-color('primary');
+  outline: none;
 
   &-primary {
 
@@ -89,4 +86,14 @@ a {
       color: theme-color('primary');
     }
   }
+}
+
+.notification {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  box-shadow: 0px 0px 0px 10px black;
+  color: theme-color(white);
 }

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+<h1>Demande de support</h1>
+<p>
+    Une demande de support à été reçu
+</p>
+<ul>
+    <li>
+        Nom : {{ contact.name }}
+    </li>
+    <li>
+        Email : {{ contact.email }}
+    </li>
+    <li>
+        Téléphone : {{ contact.phone ? contact.phone|phone_number_format : 'Non renseigné' }}
+    </li>
+    <li>
+        Sujet : {{ contact.topic }}
+    </li>
+</ul>
+<p>
+    Message : {{ contact.message }}
+</p>
+</body>
+</html>

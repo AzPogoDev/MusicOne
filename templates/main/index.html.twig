@@ -6,10 +6,260 @@
 
 {% block body %}
 
-    <div class="homePage">
+    <div class="hero">
         <div class="container">
-            <h1>Index</h1>
+            <div class="hero-wp">
+                <div class="left">
+                    <h2 class="sub-title">MusicOne</h2>
+                    <h1 class="title">
+                        The #1 French event plateforme
+                    </h1>
+                    <div class="btn-group">
+                        <div class="btn btn-primary">
+                            <a href="{{ path('event_main') }}">Voir les events</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="kpi-wp">
+                        <div class="kpi">
+                            <p>89 999</p>
+                            <h4 class="kpi-title">Concerts</h4>
+                        </div>
+                        <div class="kpi">
+                            <p>89 999</p>
+                            <h4 class="kpi-title">Artistes</h4>
+                        </div>
+                        <div class="kpi">
+                            <p>89 999</p>
+                            <h4 class="kpi-title">Utilisateurs</h4>
+                        </div>
+                        <div class="kpi">
+                            <p>89 999</p>
+                            <h4 class="kpi-title">Motivés</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <div class="main homePage">
+
+        {# <div class="top-bar"> #}
+        {# <div class="left"> #}
+        {# <h2 class="sub-title"> #}
+        {# Covid #}
+        {# </h2> #}
+        {# <h2 class="title"> #}
+        {# Filtre : #}
+        {# </h2> #}
+        {# </div> #}
+        {# <div class="right"> #}
+        {# <div class="filter-wp"> #}
+        {# <div class="filter"> #}
+        {# <h2 class="kpi-title">Par régions :</h2> #}
+        {# <select id="cars" name="boxes" class="boxselect"> #}
+        {# <option value="all">Toutes les régions</option> #}
+        {# #}{# {% for stat in deptoday %} #}
+        {# #}{# <option value="{{ stat.lib_reg|lower|replace({' ': '-'})|replace({'ô': 'o'}) | replace({'\'': '-'}) }}">{{ stat.lib_reg }}</option> #}
+        {# #}{# {% endfor %} #}
+        {# </select> #}
+        {# </div> #}
+        {# <div class="filter"> #}
+        {# <h2 class="kpi-title">Par départements :</h2> #}
+        {# <select id="cars" name="boxes" class="boxselect"> #}
+        {# <option value="all">Tous les départements</option> #}
+        {# #}{# {% for stat in deptoday %} #}
+        {# #}{# <option value="{{ stat.lib_dep|lower|replace({' ': '-'}) |replace({'ô': 'o'}) | replace({'\'': '-'}) }}">{{ stat.lib_dep }}</option> #}
+        {# #}{# {% endfor %} #}
+        {# </select> #}
+        {# </div> #}
+        {# <div class="filter"> #}
+        {# <h2 class="kpi-title">Par :</h2> #}
+        {# <select name="filter" id="filter" class="filter"> #}
+        {# <option value="name"> #}
+        {# Tous #}
+        {# </option> #}
+        {# <option value="hosp">Réanimations #}
+        {# </option> #}
+        {# <option value="dchosp">Décès #}
+        {# </option> #}
+        {# </select> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# </div> #}
+        {# <div class="statistique"> #}
+        {# <div class="statistique-wp grid-filter" id="stats"> #}
+        {# #}
+        {# </div> #}
+        {# </div> #}
+        <section class="features">
+            <div class="container">
+                <div class="features-wp">
+                    <div class="left">
+                        <h2 class="title m-0">Features</h2>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sagittis
+                            odio. Aliquam sed
+                            mi sit amet diam consequat posuere. Morbi leo augue, elementum fermentum aliquet et, commodo
+                            id lorem. Suspendisse blandit lacus eu tellus rutrum, eu mattis mi ornare. Pellentesque
+                            rhoncus lacus urna. </p>
+                        <a href="" class="btn btn-outline">More features</a>
+                    </div>
+                    <div class="right">
+                        <div class="kpi-wp">
+                            <div class="stat-kpi">
+                                <i class="fas fa-users-cog"></i>
+                                <h3 class="sub-title">
+                                    Nom de la features
+                                </h3>
+                                <p>
+                                    Petite description
+                                </p>
+                            </div>
+
+                            <div class="stat-kpi">
+                                <i class="fas fa-users-cog"></i>
+                                <h3 class="sub-title">
+                                    Nom de la features
+                                </h3>
+                                <p>
+                                    Petite description
+                                </p>
+                            </div>
+
+                            <div class="stat-kpi">
+                                <i class="fas fa-users-cog"></i>
+                                <h3 class="sub-title">
+                                    Nom de la features
+                                </h3>
+                                <p>
+                                    Petite description
+                                </p>
+                            </div>
+
+                            <div class="stat-kpi">
+                                <i class="fas fa-users-cog"></i>
+                                <h3 class="sub-title">
+                                    Nom de la features
+                                </h3>
+                                <p>
+                                    Petite description
+                                </p>
+                            </div>
+
+                            <div class="stat-kpi">
+                                <i class="fas fa-users-cog"></i>
+                                <h3 class="sub-title white">
+                                    Nom de la features
+                                </h3>
+                                <p>
+                                    Petite description
+                                </p>
+                            </div>
+
+                            <div class="stat-kpi">
+                                <i class="fas fa-users-cog"></i>
+                                <h3 class="sub-title white">
+                                    Nom de la features
+                                </h3>
+                                <p>
+                                    Petite description
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="info">
+            <div class="container">
+                <div class="info-wp">
+                    <div class="left">
+                        <img src="https://images.unsplash.com/photo-1639090504006-c3bf7785d136?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                             alt="">
+                    </div>
+                    <div class="right">
+                        <div class="title">Titre</div>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sagittis odio. Aliquam sed
+                            mi sit amet diam conse
+                        </p>
+                        <a href="" class="btn btn-outline">Show more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="info">
+            <div class="container">
+
+                <div class="info-wp">
+
+                    <div class="left">
+                        <div class="title">Titre</div>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sagittis odio. Aliquam sed
+                            mi sit amet diam conse
+                        </p>
+                        <a href="" class="btn btn-outline">Show more</a>
+                    </div>
+                    <div class="right">
+                        <img src="https://images.unsplash.com/photo-1639090869991-632afb8a544c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
+                             alt="">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="pictures">
+            <div class="container">
+
+                <div class="pictures-wp">
+                    <div class="picture">
+                        <h3>Big title</h3>
+                        <img src="https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80"
+                             alt="">
+                    </div>
+                    <div class="picture-g">
+                        <h3>Big title</h3>
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                             alt="">
+                    </div>
+                    <div class="picture-d">
+                        <h3>Big title</h3>
+                        <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                             alt="">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="newsletter">
+            <div class="container">
+
+                <div class="newsletter-wp">
+                    <h2 class="title">
+                        Titre
+                    </h2>
+                    <p class="desription">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis sagittis odio. Aliquam sed mi
+                        sit amet diam consequat posuere. Morbi leo augue, elementum fermentum aliquet et, commodo id
+                        lorem. Suspendisse blandit lacus eu tellus rutrum, eu mattis mi ornare. Pellentesque rhoncus
+                        lacus urna, ut laoreet neque aliquam ac. Ut sagittis augue tellus, a vestibulum diam mattis eu.
+                        Vivamus mollis velit mauris, et rhoncus tellus facilisis quis. Fusce et cursus sapien. Donec
+                        eget viverra odio.
+                    </p>
+                    <a href="/" class="btn btn-outline">
+                        S'inscrire
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
 
     </div>
 

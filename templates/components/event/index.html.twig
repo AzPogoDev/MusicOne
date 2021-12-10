@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EventController!{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('event') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('event') }}
+{% endblock %}
+
+{% block body %}
+
+    <div class="event">
+        <div class="container">
+            <div class="event__heroHeader sub-title">
+                Il y'a {{ events | length }} events
+            </div>
+            <div class="event-wp">
+                <div class="event-wp__sideBar">
+                    <div class="filter">
+                        <div class="sub-title">Categories :</div>
+                        <div class="event__sideBar__categoryLoop">
+                            <div class="event__sideBar__categoryLoop__item">
+                                Concert
+                            </div>
+                            <div class="event__sideBar__categoryLoop__item">
+                                Festival
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter">
+                        <div class="sub-title">Trier par :</div>
+                        <div class="event__sideBar__categoryLoop">
+                            <div class="event__sideBar__categoryLoop__item">
+                                Concert
+                            </div>
+                            <div class="event__sideBar__categoryLoop__item">
+                                Festival
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="event-wp__content">
+                    <div class="event__items">
+                        {% for event in events %}
+                            <div class="event__items__item">
+                                <div class="event__items__item__card">
+                                    <div class="event__items__item__card__top"
+                                         style="background: url('{{ event.picture }}')"></div>
+                                    <div class="event__items__item__card__bottom">
+                                        <h2 style="color: white">{{ event.name }}</h2>
+                                        <ul>
+                                            <li><i class="fas fa-map-marker-alt"></i>
+                                                <span>
+                                                    {{ event.place.label }}
+                                                </span>
+                                            </li>
+                                            {# <li><i class="fas fa-users"></i> #}
+                                            {# <span> #}
+                                            {# {{ event.capacity }} #}
+                                            {# </span> #}
+                                            {# </li> #}
+                                            <li>
+                                                <i class="fas fa-calendar-alt"></i><span>
+
+                                                {{ event.startAt | format_datetime('long','short') }}
+                                                </span>
+
+                                            </li>
+                                        </ul>
+                                        <a href="{{ path('event_single',{id: event.id} ) }}" class="btn btn-outline">Voir
+                                            l'event</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        {% else %}
+                            <h2>Il n'y a pas d'events</h2>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+{% endblock %}

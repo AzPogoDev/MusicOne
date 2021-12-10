@@ -13,6 +13,11 @@
             <li class="header__list">
                 <a class="header__link" href="#">About us</a>
             </li>
+            {% if( app.user) %}
+                <li class="header__list">
+                    <a class="header__link" href="{{ path('event_new') }}">Créer un event</a>
+                </li>
+            {% endif %}
         </ul>
         <ul class="header__menu__nav">
 
@@ -21,12 +26,15 @@
                 <li class="header__list">
                     <a class="header__link connect" href="{{ path('app_logout') }}">Se déconnecter</a>
                 </li>
+                <li class="header__list">
+                    <a class="header__link connect" href="{{ path('app_accont') }}"><i class="fas fa-user"></i></a>
+                </li>
             {% else %}
                 <li class="header__list">
                     <a class="header__link" href="#">S'inscrire</a>
                 </li>
                 <li class="header__list">
-                    <a class="header__link connect" href="{{ path('app_login') }}">Se connecter</a>
+                    <a class="header__link connect" href="{{ path('app_login') }}"><i class="fas fa-user"></i></a>
                 </li>
             {% endif %}
 

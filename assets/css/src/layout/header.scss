@@ -1,12 +1,17 @@
 
 .header {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
+  background: rgba(255, 255, 255, 0.28);
   width: 100%;
   transition: 0.6s;
-  padding: 40px 100px;
+  padding: 20px 100px;
   z-index: 100000;
+
+  & a {
+    color:$white !important;
+  }
 
   &__menu {
     display: flex;
@@ -24,7 +29,6 @@
   &__logo {
     position: relative;
     font-weight: 700;
-    color: theme-color(primary);
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -34,20 +38,24 @@
   &__list {
     position: relative;
     list-style: none;
+    & i {
+      color: $white;
+    }
   }
 
   &__link {
     position: relative;
     margin: 0 15px;
-    color: theme-color(primary);
     letter-spacing: 2px;
     font-weight: 500;
     transition: 0.6s;
+
     &.connect {
       padding: 10px 20px;
       border: 1px solid #D9E2FC;;
       border-radius: 15px;
-      &:hover{
+
+      &:hover {
         background: #D9E2FC;
         color: theme-color('primary');
       }

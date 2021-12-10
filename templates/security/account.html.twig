@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte{% endblock %}
+
+{% block body %}
+    <div class="account">
+        <div class="container">
+
+
+            <div class="wp">
+                <div class="account-wp">
+                    <h1 class="h3 title mb-3 font-weight-normal">Mon compte</h1>
+                    <div class="account-wp__informations">
+                        <div class="item">
+                            <h2 class="kpi-title">Email : {{ user.email }}</h2>
+                        </div>
+                        <div class="item">
+                            <h2 class="kpi-title">Pseudo : {{ user.displayName }}</h2>
+                        </div>
+                        <div class="item">
+                            <h2 class="kpi-title">Nom : {{ user.firstname }}</h2>
+                        </div>
+                        <div class="item">
+                            <h2 class="kpi-title">Prénom : {{ user.lastname }}</h2>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="right-wp">
+                    <div class="item">
+                        <h2 class="kpi-title">Vos events :</h2>
+                        <div class="event-wp">
+
+                            {% for event in events %}
+                                <a href="{{ path('event_single',{id: event.id} ) }}"
+                                   style="text-decoration: none;color: inherit">
+                                    <div class="event-box">
+
+                                        <h2 class="sub-title">{{ event.name }}</h2>
+                                        <small>{{ event.description }}</small>
+                                    </div>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

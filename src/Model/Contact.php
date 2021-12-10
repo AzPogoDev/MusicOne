@@ -2,12 +2,45 @@
 
 namespace App\Model;
 
+use libphonenumber\PhoneNumber;
+use libphonenumber\PhoneNumberType;
+use Symfony\Component\Validator\Constraints as Assert;
+use Misd\PhoneNumberBundle\Validator\Constraints\PhoneNumber as AssertPhoneNumber;
+
 class Contact
 {
+    const TOPIC = [
+        'Question générale' => 'generic',
+        'Question précise' => 'precises',
+        'Autres' => 'other',
+    ];
+
+    /**
+     * @Assert\NotBlank(message="Vide")
+     * @Assert\Email(message="Email invalid")
+     */
     private $email;
+
+    /**
+     * @Assert\NotBlank(message="Vide")
+     * @Assert\Length(
+     *     min=2,
+     *     max=64,
+     * )
+     */
     private $name;
+
+    /**
+     * @Assert\NotBlank(message="Vide")
+     * @Assert\Length(
+     *     min=20,
+     *     max=1200,
+     * )
+     */
     private $message;
+
     private $phone;
+
     private $topic;
 
     public function getEmail(): string
@@ -43,12 +76,12 @@ class Contact
         return $this;
     }
 
-    public function getPhone(): string
+    public function getPhone(): ?PhoneNumber
     {
         return $this->phone;
     }
 
-    public function setPhone(string $phone)
+    public function setPhone(?PhoneNumber $phone)
     {
         $this->phone = $phone;
         return $this;

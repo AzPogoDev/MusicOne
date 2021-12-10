@@ -1,0 +1,80 @@
+@import "../../base/theme";
+
+.wp {
+  display: flex;
+  justify-content: space-between;
+
+  .right-wp {
+    background: $bg-secondary;
+    padding: 4rem;
+    width: 49%;
+    color: $white;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: 1px solid $ghost;
+  }
+}
+
+.account {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $bg-primary;
+
+  &-wp {
+    background: $bg-secondary;
+    padding: 4rem;
+    width: 49%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: $white;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: 1px solid $ghost;
+
+    & .form {
+      &-wp {
+
+        display: flex;
+        flex-direction: column;
+
+        .form-item {
+          margin: 1rem 0;
+          color: $white;
+          display: flex;
+          flex-direction: column;
+
+          input {
+            margin-top: 1rem;
+            border-radius: 5px;
+            background: $bg-light;
+            border: 1px solid $ghost;
+            padding: 12px 6px;
+            outline: none;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.event-wp {
+  .event-box {
+    background: $bg-light;
+    border: 1px solid $ghost;
+    padding: 0.2rem;
+    border-radius: 5px;
+    margin: 0.25rem 0;
+
+    .sub-title {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+}
