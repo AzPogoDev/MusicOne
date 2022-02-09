@@ -4,9 +4,12 @@ namespace App\Entity;
 
 use App\Repository\AddressRepository;
 use Doctrine\ORM\Mapping as ORM;
+use function Symfony\Component\Translation\t;
+use App\Validator as AppAssert;
 
 /**
  * @ORM\Entity(repositoryClass=AddressRepository::class)
+ * @AppAssert\Address()
  */
 class Address
 {
@@ -88,5 +91,10 @@ class Address
         $this->country = $country;
 
         return $this;
+    }
+
+    public function __toString()
+    {
+        return sprintf('%s %s %s', $this->getStreet(), $this->getCity(), $this->getZipcode());
     }
 }

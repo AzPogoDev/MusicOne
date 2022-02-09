@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\EventRepository;
+use App\Utils\Doctrine\TimeTrait;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -12,6 +13,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Event
 {
+
+    use TimeTrait;
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -81,6 +85,11 @@ class Event
      * @ORM\OneToMany(targetEntity=Booking::class, mappedBy="event", orphanRemoval=true)
      */
     private $participants;
+
+    /**
+     * @ORM\Column(type="datetime_immutable")
+     */
+    private $createdAt;
 
     public function __construct()
     {
@@ -263,6 +272,22 @@ class Event
                 $participant->setEvent(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param \DateTimeImmutable $createdAt
+     * @return $this
+     */
+    public function setCreatedAt(\DateTimeImmutable $createdAt): self
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }

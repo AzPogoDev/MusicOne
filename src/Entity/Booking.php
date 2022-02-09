@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\BookingRepository;
+use App\Utils\Doctrine\TimeTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -10,6 +11,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Booking
 {
+
+    use TimeTrait;
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -38,6 +42,11 @@ class Booking
      * @ORM\Column(type="integer")
      */
     private $seat;
+
+    /**
+     * @ORM\Column(type="datetime_immutable")
+     */
+    private $createdAt;
 
     public function getId(): ?int
     {
@@ -88,6 +97,18 @@ class Booking
     public function setSeat(int $seat): self
     {
         $this->seat = $seat;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $createdAt): self
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }
